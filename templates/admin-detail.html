@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Ateva | Registration</title>
+{% endblock %}
+
+{% block body %}
+<main class="page registration-page">
+    <section class="clean-block clean-form dark">
+        <div class="container">
+            <div class="block-heading">
+                <h2 class="text-info">Admin Details</h2>
+            </div>
+            <form>
+                <div class="form-group"><label for="name">Full Name</label><input class="form-control item" type="text" id="fullname"></div>
+                <div class="form-group"><label for="organisation-name">Organisation Name</label><input class="form-control item" type="text" id="organisation-name"></div>
+                <div class="form-group"><label for="phone-no">Phone Number</label><input class="form-control item" type="tel" id="phone-no"></div>
+                <div class="form-group"><label for="otp">Verification Code</label><input class="form-control item" type="text" id="otp"></div><button class="btn btn-primary btn-block" type="submit">Continue</button></form>
+        </div>
+    </section>
+</main>
+{% endblock %}

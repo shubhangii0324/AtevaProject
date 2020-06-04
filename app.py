@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 import os
 
@@ -10,12 +10,20 @@ db = SQLAlchemy(app)
 from models import Result
 
 @app.route('/')
-def hello():
-    return "Hello World!"
+def home():
+    return render_template('index.html')
 
-@app.route('/<name>')
-def hello_name(name):
-    return "Hello {}!".format(name)
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/about-us')
+def aboutus():
+    return render_template('about-us.html')
+
+@app.route('/reset-password')
+def resetpassword():
+    return render_template('reset-password.html')
 
 if __name__ == '__main__':
     app.run()
